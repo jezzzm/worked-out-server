@@ -7,7 +7,7 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/out.js --external:express",
-    "watch": "yarn run build --watch"
+    "watch": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "apollo-server": "^2.22.2",
     "esbuild": "^0.11.2",
     "graphql": "^15.5.0",
+    "nodemon": "^2.0.7",
     "ts-node": "^9.1.1"
   },
   "devDependencies": {
