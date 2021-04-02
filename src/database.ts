@@ -195,7 +195,7 @@ export const routines = [
             alternatives: [
               {
                 movement: 'Hip Mobility',
-                reps: { min: 5, type: 'MINUTES' },
+                reps: { min: 5, method: 'MINUTE' },
               },
             ],
           },
