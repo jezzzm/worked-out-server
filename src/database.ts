@@ -25,11 +25,11 @@ export const routines = [
           {
             primary: {
               movement: 'Lunge',
-              reps: { min: 20, type: 'metres' },
+              reps: { min: 20, method: 'METRE' },
               modifiers: {
                 equipment: {
                   base: 'KETTLEBELL',
-                  style: ['FRONT', 'SINGLE_ARM'],
+                  style: ['FRONT_RACK', 'SINGLE_ARM'],
                 },
               },
             },
@@ -78,7 +78,7 @@ export const routines = [
               modifiers: {
                 equipment: {
                   base: 'KETTLEBELL',
-                  style: ['DOUBLE', 'RUSSIAN'],
+                  style: ['RUSSIAN', 'DOUBLE'],
                 },
               },
             },
@@ -106,18 +106,21 @@ export const routines = [
                 reps: { min: 3, max: 5 },
                 modifiers: {
                   tempo: '22X2',
-                  equipment: {
-                    base: 'DIP_BARS',
+                  place: {
+                    base: 'PARALLEL_BARS',
                   },
                 },
               },
               {
                 movement: 'Dip',
-                reps: { min: 30, type: 'seconds' },
+                reps: { min: 30, method: 'SECOND' },
                 modifiers: {
                   equipment: {
-                    base: 'DIP_BARS',
+                    base: 'BODYWEIGHT',
                     style: ['HOLD'],
+                  },
+                  place: {
+                    base: 'PARALLEL_BARS',
                   },
                 },
               },

@@ -33,6 +33,7 @@ const typeDefs = gql`
     COSSACKS
     RUSSIAN
     FRONT
+    FRONT_RACK
     BACK
     LOW_BACK
     HOLD
@@ -48,7 +49,6 @@ const typeDefs = gql`
     BAR
     RING
     PARALLEL_BARS
-    DIP_BARS
     FLOOR
     BENCH
     BOX
@@ -70,10 +70,10 @@ const typeDefs = gql`
   # Reps
   enum RepsMethod {
     STANDARD
-    CALORIES
-    METRES
-    MINUTES
-    SECONDS
+    CALORIE
+    METRE
+    MINUTE
+    SECOND
   }
 
   type Reps {

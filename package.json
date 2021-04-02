@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=out.js --external:express",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/out.js --external:express",
     "watch": "yarn run build --watch"
   },
   "keywords": [],
