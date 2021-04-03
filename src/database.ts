@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 export const routines = [
   {
+    id: 1,
     category: 'MECHANICS',
     summary: `Deadlift is all about time under tension with the tempo, you get to work this for 4 weeks, so stick to the intention 8/10 effort.`,
     date: '20200329',
@@ -167,6 +168,7 @@ export const routines = [
     ],
   },
   {
+    id: 2,
     category: 'OLYMPIC_LIFTING',
     date: '20200331',
     coach: 'KIM',
@@ -249,3 +251,4 @@ export const routines = [
     ],
   },
 ];
+

@@ -1,0 +1,29 @@
+service: worked-out-server
+
+useDotenv: true
+
+plugins:
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  timeout: 15
+  lambdaHashingVersion: 20201221
+  apiGateway:
+    apiKeys:
+      - name: lambdaApolloKey
+        value: ${env:AWS_KEY}
+
+functions:
+  graphql:
+    handler: src/index.ts
+    events:
+      - http:
+          private: true
+          path: graphql
+          method: post
+      - http:
+          private: true
+          path: graphql
+          method: get

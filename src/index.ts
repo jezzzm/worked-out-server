@@ -1,15 +1,10 @@
-import { ApolloServer } from 'apollo-server';
-import typeDefs from './type-defs';
-import { routines } from './database';
+import server from './server';
 
-const resolvers = {
-  Query: {
-    routines: () => routines,
-  },
+// lambda handler
+const handler = (event, context, callback) => {
+  context.callbackWaitsForEmptyEventLoop = false;
+
+  return server.createHandler()(event, context, callback);
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
-
-server.listen().then(({ url }) => {
-  console.log(`Server running at ${url}`);
-});
+export default handler;

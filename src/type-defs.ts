@@ -176,6 +176,7 @@ const typeDefs = gql`
   }
 
   type Routine {
+    id: Int
     category: RoutineCategory
     date: String
     coach: RoutineCoach
@@ -186,7 +187,7 @@ const typeDefs = gql`
 
   type Query {
     routines: [Routine]
-    routine: Routine
+    routine(id: Int!): Routine
   }
 `;
 
